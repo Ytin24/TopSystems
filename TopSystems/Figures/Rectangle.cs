@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 //Деление на 2 необходимо лишь потому, что длина шрифта в 2 раза больше чем ширина
 namespace TopSystems.Figures {
-    public class Square : Figure {
+    public class Rectangle : Figure {
         public readonly int Height;
         public readonly int Width;
-        public Square(int width) {
+        public Rectangle(int width) {
             this.Width = width;
             this.Height = width / 2;
         }
-        public Square(int height, int width) {
+        public Rectangle(int height, int width) {
             this.Height = height / 2;
             this.Width = width;
         }
