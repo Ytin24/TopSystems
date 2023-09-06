@@ -5,18 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using TopSystems.Figures;
+using TopSystems.interfaces;
 
 namespace TopSystems.Model {
-    public class FigureStructure {
-        List<IFigure> Figures = new List<IFigure>();
-        public void Add(IFigure element) {
+    public class ConsoleDrawlerStructure {
+        List<IConsoleDrawler> Figures = new List<IConsoleDrawler>();
+        public void Add(IConsoleDrawler element) {
             Figures.Add(element);
         }
-        public void Remove(IFigure element) {
+        public void Remove(IConsoleDrawler element) {
             Figures.Remove(element);
         }
         public void Accept(Visitor visitor) {
-            foreach (IFigure figure in Figures)
+            foreach (IConsoleDrawler figure in Figures)
                 figure.Accept(visitor);
         }
     }

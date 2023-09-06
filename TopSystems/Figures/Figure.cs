@@ -8,7 +8,7 @@ using TopSystems.Model;
 
 namespace TopSystems.Figures
 {
-    public abstract class Figure : IFigure{
+    public abstract class Figure : IConsoleDrawler{
         public abstract Task DrawToConsole();
         public void Accept(Visitor visitor) {
             visitor.Visit(this);
